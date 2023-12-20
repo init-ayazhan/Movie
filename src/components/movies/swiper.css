@@ -40,6 +40,7 @@
   overflow: clip;
   list-style: none;
   padding: 0;
+ 
   /* Fix of Webkit flickering */
   z-index: 1;
   display: block;
@@ -115,9 +116,9 @@
   -ms-overflow-style: none;
   /* For Internet Explorer and Edge */
 }
-.swiper-css-mode > .swiper-wrapper::-webkit-scrollbar {
+/* .swiper-css-mode > .swiper-wrapper::-webkit-scrollbar {
   display: none;
-}
+} */
 .swiper-css-mode > .swiper-wrapper > .swiper-slide {
   scroll-snap-align: start start;
 }

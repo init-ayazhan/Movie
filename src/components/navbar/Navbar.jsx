@@ -1,14 +1,19 @@
 import SearchInput from '../search-input/SearchInput'
-import logo from '/src/assets/images/logo.png';
 import './navbar.css'
 
 export default function Navbar() {
     return (
         <div className="navbar">
             <div className="navbar__nav-brand">
-                <img src={logo} className="w-16" alt="" />
-                <h2 className="text-2xl max-sm:hidden bg-gradient-to-r from-[#6889e6] via-[#a5bdff] to-[#d6e1ff] bg-clip-text text-transparent">Ronyzs</h2>
+                <h2 className="text-4xl  text-white">Movie</h2>
             </div>
+
+            <div className='lg:flex items-center gap-4 hidden uppercase'>
+                <a href="/" className='hover:border-b-2 border-white' > Home </a>
+                <a href="/about"  className='hover:border-b-2 border-white'> About</a>
+                <a href="/movie"  className='hover:border-b-2 border-white'> Movie </a>
+            </div>
+
             <SearchInput />
         </div>
     )

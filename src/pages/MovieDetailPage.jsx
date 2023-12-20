@@ -73,10 +73,12 @@ export default function MovieDetailPage() {
                                 </span>
                             </span>
                             <span className={`${isHasRecommendation ? '' : 'invisible'}`}>
-                                <h3 className="text-lg font-semibold">Recommendation</h3>
+                                <div className="flex flex-col lg:flex-row items-center justify-between">
+                                    <h3 className="text-lg font-semibold">Recommendation</h3>
+                                    <Link to="/" className="bg-slate-800 rounded-sm font-medium py-2 px-2 ">Back to Home</Link>
+                                </div>
                                 <Movies fetchData={fetchRecommendation} isHasRecommendation={isHasRecommendationHandler} />
                             </span>
-                            <Link to="/" className="bg-slate-800 rounded-sm font-medium py-1 px-3">Back to Home</Link>
                         </div>
                     </span>
                     <span className="order-1 grid lg:order-2 h-80 md:h-auto items-stretch md:items-center">

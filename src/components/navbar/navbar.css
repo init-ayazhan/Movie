@@ -1,5 +1,5 @@
 .navbar {
-  @apply flex justify-between items-center bg-transparent p-5 h-[100px] overflow-hidden;
+  @apply flex justify-between items-center bg-transparent absolute z-10 h-[100px] w-full px-5 overflow-hidden;
 }
 
 .navbar__nav-brand {

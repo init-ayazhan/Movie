@@ -24,12 +24,14 @@ export default function MoviesPage() {
 
     const Landing = () => {
         return (
-            <section className="app__app-content">
+            <section className="app__app-content ">
                 <LatestMovieCard />
-                <Movies fetchData={fetchNowPlaying} title="Now Playing" />
-                <Movies fetchData={fetchTopRated} title="Top Rated" />
-                <Movies fetchData={fetchPopular} title="Popular" />
-                <Movies fetchData={fetchUpcoming} title="Upcoming" />
+                <div className="px-5 space-y-5 pt-5">
+                    <Movies fetchData={fetchNowPlaying} title="Now Playing" />
+                    <Movies fetchData={fetchTopRated} title="Top Rated" />
+                    <Movies fetchData={fetchPopular} title="Popular" />
+                    <Movies fetchData={fetchUpcoming} title="Upcoming" />
+                </div>
             </section>
         )
     }

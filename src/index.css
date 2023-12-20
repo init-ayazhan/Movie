@@ -35,9 +35,9 @@ body {
   @apply p-0;
 }
 
-.app .app__app-content {
+/* .app .app__app-content {
   @apply m-5;
-}
+} */
 
 .movie__detail-content {
   @apply flex flex-col lg:h-screen md:justify-center py-5 px-10 md:p-10 bg-gradient-to-t lg:bg-gradient-to-r from-slate-950 to-transparent;

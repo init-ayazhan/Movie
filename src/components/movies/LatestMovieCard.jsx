@@ -27,13 +27,12 @@ export default function LatestMovieCard() {
     return (
         <div>
             <Swiper
-                className="my-5 hidden lg:block"
+                className="block h-full lg:h-srceen"
                 modules={[Autoplay]}
-                spaceBetween={16}
-                slidesPerView={3}
+                slidesPerView={1}
                 autoplay={
                     {
-                        delay: 3000,
+                        delay: 9000,
                         disableOnInteraction: false
                     }
                 }
@@ -41,19 +40,20 @@ export default function LatestMovieCard() {
                 {
                     movies.map(movie => {
                         return (
-                            <SwiperSlide key={movie.id} className="relative rounded-lg overflow-hidden lg:aspect-video cursor-pointer bg-gradient-to-t from-gray-950 via-transparent" onClick={() => navigate(`/detail/${movie.id}`)}>
+                            <SwiperSlide key={movie.id} className="relative overflow-hidden lg:aspect-video cursor-pointer bg-gradient-to-t from-gray-950 via-transparent h-full w-full" onClick={() => navigate(`/detail/${movie.id}`)}>
                                 <img
                                     src={IMAGE_URL_ORIGINAL + movie.backdrop_path}
                                     alt={movie.backdrop_path}
-                                    className="h-max -z-10 lg:absolute object-cover blur-lg"
+                                    className="h-max -z-10 lg:absolute object-cover blur-lg w-full"
                                     loading="lazy"
                                     onLoad={(e) => {
                                         e.target.classList.remove('blur-lg')
                                     }}
                                 />
-                                <div className="flex flex-col justify-end h-full p-5">
-                                    <h3 className="font-bold text-xs lg:text-xl">{movie.title}</h3>
-                                    <p className="font-thin line-clamp-1 xl:line-clamp-3">{movie.overview}</p>
+                                <div className="flex flex-col justify-end lg:justify-center h-full p-5 space-y-3 w-full lg:w-1/2">
+                                    <h3 className="font-bold text-xs lg:text-7xl">{movie.title}</h3>
+                                    <p className="font-thin line-clamp-1 xl:line-clamp-2 w-1/2">{movie.overview}</p>
+                                    <button key={movie.id}  className="py-3 w-32 bg-white font-bold text-black text-lg upppercase" onClick={() => navigate(`/detail/${movie.id}`)}>Watch</button>
                                 </div>
                             </SwiperSlide>
                         )

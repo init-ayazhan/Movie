@@ -37,7 +37,7 @@ export default function SearchInput() {
     }
 
     return (
-        <div className="search">
+        <div className="search hidden lg:flex">
             <div className={`search__search-wrapper ${toggleInput ? '' : 'md:hidden'}`}>
                 <BsSearch size="24" className='min-w-min hidden md:block' />
                 <input
