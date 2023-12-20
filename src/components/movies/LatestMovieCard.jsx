@@ -27,7 +27,7 @@ export default function LatestMovieCard() {
     return (
         <div>
             <Swiper
-                className="block h-full lg:h-srceen"
+                className="block h-full lg:h-[100vh]"
                 modules={[Autoplay]}
                 slidesPerView={1}
                 autoplay={
@@ -52,9 +52,11 @@ export default function LatestMovieCard() {
                                 />
                                 <div className="flex flex-col justify-end lg:justify-center h-full p-5 space-y-3 w-full lg:w-1/2">
                                     <h3 className="font-bold text-xs lg:text-7xl">{movie.title}</h3>
-                                    <p className="font-thin line-clamp-1 xl:line-clamp-2 w-1/2">{movie.overview}</p>
+                                    <p className="font-thin line-clamp-1 text-lg font-meduim xl:line-clamp-2 ">{movie.overview}</p>
                                     <button key={movie.id}  className="py-3 w-32 bg-white font-bold text-black text-lg upppercase" onClick={() => navigate(`/detail/${movie.id}`)}>Watch</button>
                                 </div>
+
+                               
                             </SwiperSlide>
                         )
                     })

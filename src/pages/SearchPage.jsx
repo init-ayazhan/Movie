@@ -87,7 +87,7 @@ export default function SearchPage() {
         return <EmptyPage />
 
     return (
-        <section className="m-5 grid 2xl:grid-cols-6 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-3 grid-cols-2 gap-5 md:gap-y-10">
+        <section className="m-5 pt-28 grid 2xl:grid-cols-6 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-3 grid-cols-2 gap-5 md:gap-y-10">
             {
                 movies.map(movie => {
                     return <MovieCard movie={movie} key={movie.id} />

@@ -2,6 +2,7 @@ import { Navbar, Movies, LatestMovieCard } from "../components"
 import { getNowPlaying, getPopular, getTopTated, getUpcoming } from "../utils"
 import { useSearchParams } from "react-router-dom";
 import SearchPage from "./SearchPage";
+import Footer from "../components/footer/footer";
 
 export default function MoviesPage() {
     const [useQuery] = useSearchParams()
@@ -45,6 +46,7 @@ export default function MoviesPage() {
                 // if there is query return search page
                 useQuery.get('query') ? <SearchPage /> : <Landing />
             }
+            <Footer/>
         </div>
     )
 }

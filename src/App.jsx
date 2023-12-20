@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom"
-import { ErrorPage, MovieDetailPage, MoviesPage } from "./pages"
+import { ErrorPage, MovieDetailPage, MoviesPage} from "./pages"
+import AboutPage from "./pages/AboutPage"
 
 function App() {
   return (
@@ -7,7 +8,9 @@ function App() {
       <Route path="/" element={<MoviesPage />} />
       <Route path="/detail/:id" element={<MovieDetailPage />} />
       <Route path="*" element={<ErrorPage />} />
+      <Route path="/about" element={<AboutPage />} />
     </Routes>
+
   )
 }
 
